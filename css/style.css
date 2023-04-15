@@ -10,73 +10,48 @@ body {
     color: white;
 }
 
-.navbar {
-    overflow: hidden;
-    background-color: #191970;
-    /*position: sticky;
-  position: -webkit-sticky;
-  top: 0;*/
-}
-
-.navbar a {
-    float: left;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    transition: all .5s ease-in-out;
-}
-
-.navbar a:hover{
-    background-color: aqua;
-    color: #191970;
-    font-size: 20px;
-}
-
-@keyframes pulse {
-    0% {
-        font-size: 16px;
-    }
-    50% {
-        font-size: 20px;
-    }
-    100% {
-        font-size: 16px;
-    }
-}
-
-.header h1 {
-    font-size: 50px;
-}
-
 a{
     text-decoration: none;
+    color: black;
+}
+
+.service-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
 }
 
 .service-list {
-    list-style-type: none; /*this is to remove the bullets*/
+    list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-        /* Set display property to flex */
     flex-direction: row;
-        /* Set flex-direction to row */
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .service-item {
     padding: 10px;
-    background-color: #f2f2f2;
-    border-bottom: 1px solid #ddd;
-    position: relative; /*dw about this*/
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    position: relative;
     flex: 1;
-        /* Set flex property to 1 to distribute equal width */
-        text-align: center;
-        /* Center text */
+    text-align: center;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
-.service-item:hover { /*when u bring ur mouse cursor over a single item in the menu the this will change the background color*/
-    background-color: #ddd;
+.service-item:hover {
+    background-color: #dddddd;
+    border-color: #bbbbbb;
 }
 
 .sub-list {
@@ -84,22 +59,37 @@ a{
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
-    list-style-type: none;
+    flex-direction: column;
+    width: 100%;
+    z-index: 1;
 }
 
 .service-item:hover .sub-list {
-    display: block;
-    cursor: pointer;
+    display: flex;
 }
 
 .sub-item {
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #dddddd;
+    list-style-type: none;
+    text-align: center;
+    color: #555555;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    transition: all 0.2s ease-in-out;
 }
 
-.sub-item:last-child {  /*for the last item in the sublist dont show any borders on the bottom*/
+.sub-item:last-child {
     border-bottom: none;
+}
+
+.sub-item:hover {
+    background-color: #f2f2f2;
+    color: #333333;
 }
